@@ -34,12 +34,12 @@ public class Main {
 // Задание №4
         byte bottleTwoMinutes = 16;
         byte twoMinutes = 2;
-        int bottleOneMinute = (bottleTwoMinutes / twoMinutes);
-        int bottleTwentyMinute = bottleOneMinute * 20;
-        int minetesOneDay = 1 * 24 * 60;
-        int bottleDay = bottleOneMinute * minetesOneDay;
-        int bittleThreeDay = bottleOneMinute * minetesOneDay * 3;
-        int bittleOneMonth = bottleOneMinute * minetesOneDay * 30;
+        short bottleOneMinute = (short) (bottleTwoMinutes / twoMinutes);
+        short bottleTwentyMinute = (short) (bottleOneMinute * 20);
+        short minetesOneDay = 24 * 60;
+        short bottleDay = (short) (bottleOneMinute * minetesOneDay);
+        short bittleThreeDay = (short) (bottleOneMinute * minetesOneDay * 3);
+        short bittleOneMonth = (short) (bottleOneMinute * minetesOneDay * 30);
             System.out.println("За 20 минут машина произела " + bottleTwentyMinute + " штук бутылок");
             System.out.println("За один день машина произела " + bottleDay + " штук бутылок");
             System.out.println("За три дня машина произела " + bittleThreeDay + " штук бутылок");
@@ -48,24 +48,12 @@ public class Main {
         byte jarBye =120;
         byte oneClassWhiteJar = 2;
         byte oneClassBrownJar = 4;
-        int totalClass = jarBye / (oneClassWhiteJar + oneClassBrownJar);
-        int owerWhiteJar = totalClass * oneClassWhiteJar;
-        int owerBrownJar = totalClass * oneClassBrownJar;
+        short totalClass = (short) (jarBye / (oneClassWhiteJar + oneClassBrownJar));
+        short owerWhiteJar = (short) (totalClass * oneClassWhiteJar);
+        short owerBrownJar = (short) (totalClass * oneClassBrownJar);
             System.out.println("В школе, где " + totalClass + " классов, нужно " + owerWhiteJar + " банок белой краски и " + owerBrownJar + " банок коричневой краски");
 // Задание №6
-        byte bananas = 5;
-        byte weightBanana = 105;
-        int milk = 200;
-        byte weightMilkInOneHundred = 105;
-        byte iceCream = 2;
-        byte weightIceCream = 100;
-        byte egg = 4;
-        byte weightEgg = 70;
-        int weightBananas = bananas * weightBanana;
-        int weightMilks = milk / 100 * weightMilkInOneHundred;
-        int weightIceCreams = iceCream * weightIceCream;
-        int weightEggs = egg * weightEgg;
-        int weightGr = weightBananas + weightMilks + weightIceCreams + weightEggs;
+        int weightGr = getWeightGr();
         double weightKg = weightGr / 1000.0;
             System.out.println(weightGr);
             System.out.println(weightKg);
@@ -86,14 +74,31 @@ public class Main {
         byte monthYear = 12;
         double coefficient = 0.1;
 
-        double salaryMashaNew = salaryMasha + (salaryMasha * coefficient); // Зп Маши с 10%
-        double salaryDenisNew = salaryDenis + (salaryDenis * coefficient); // Зп Дениса с 10%
-        double salaryKristinaNew = salaryKristina + (salaryKristina * coefficient); // Зп Кристины с 10%
-        double salaryMashaDifferenceYear = (salaryMashaNew * monthYear) - (salaryMasha * monthYear); //"Разница годовая Маши "
-        double salaryDenisDifferenceYear = (salaryDenisNew * monthYear) - (salaryDenis * monthYear); //"Разница годовая Дениса "
-        double salaryKristinaDifferenceYear = (salaryKristinaNew * monthYear) - (salaryKristina * monthYear); //"Разница годовая Кристины "
+        double salaryMashaNew = salaryMasha + (salaryMasha * coefficient);
+        double salaryDenisNew = salaryDenis + (salaryDenis * coefficient);
+        double salaryKristinaNew = salaryKristina + (salaryKristina * coefficient);
+        double salaryMashaDifferenceYear = (salaryMashaNew * monthYear) - (salaryMasha * monthYear);
+        double salaryDenisDifferenceYear = (salaryDenisNew * monthYear) - (salaryDenis * monthYear);
+        double salaryKristinaDifferenceYear = (salaryKristinaNew * monthYear) - (salaryKristina * monthYear);
             System.out.println("Маша будет получать " + salaryMashaNew + " рублей. Годовая разница в ЗП составляет " + salaryMashaDifferenceYear);
             System.out.println("Денис будет получать " + salaryDenisNew + " рублей. Годовая разница в ЗП составляет " + salaryDenisDifferenceYear);
             System.out.println("Кристина будет получать " +  salaryKristinaNew + " рублей. Годовая разница в ЗП составляет " + salaryKristinaDifferenceYear);
+    }
+
+    private static int getWeightGr() {
+        byte bananas = 5;
+        byte weightBanana = 105;
+        short milk = 200;
+        byte weightMilkInOneHundred = 105;
+        byte iceCream = 2;
+        byte weightIceCream = 100;
+        byte egg = 4;
+        byte weightEgg = 70;
+        int weightBananas = bananas * weightBanana;
+        int weightMilks = milk / 100 * weightMilkInOneHundred;
+        int weightIceCreams = iceCream * weightIceCream;
+        int weightEggs = egg * weightEgg;
+        int weightGr = weightBananas + weightMilks + weightIceCreams + weightEggs;
+        return weightGr;
     }
 }
