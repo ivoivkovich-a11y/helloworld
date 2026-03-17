@@ -20,9 +20,9 @@ public class Main {
         float a = 27.12f;
         long b = 987678965549L;
         float c = 2.786f;
-        int d = 569;
-        int i = -159;
-        int f = 27897;
+        short d = 569;
+        short i = -159;
+        short f = 27897;
         byte g = 67;
 // Задание №3
         byte studentLudmilaPavlovna = 23;
