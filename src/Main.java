@@ -11,10 +11,10 @@ public class Main {
         double sizeBacteria = 23.2333233456;
             System.out.println("Значение переменной syringes с типом int равно " + syringes); //Строка №1
             System.out.println("Значение переменной " + "treatmentDepartment" + " с типом" + " byte" + " равно " + treatmentDepartment); //Строка №2
-            System.out.println("Значение переменной syringes с типом short равно " + nurses);
-            System.out.println("Значение переменной syringes с типом long равно " + injections);
-            System.out.println("Значение переменной syringes с типом float равно " + workLoadNurses);
-            System.out.println("Значение переменной syringes с типом double равно " + sizeBacteria);
+            System.out.println("Значение переменной nurses с типом short равно " + nurses);
+            System.out.println("Значение переменной injections с типом long равно " + injections);
+            System.out.println("Значение переменной workLoadNurses с типом float равно " + workLoadNurses);
+            System.out.println("Значение переменной sizeBacteria с типом double равно " + sizeBacteria);
 //Комментарий к заданию №1. Тест можно написать минимум двумя вариантами как в строках №1 и №2. Я считаю , что более читабильно было как в строке №1 (весь текст удобнее читается)
 // Задание №2
         float a = 27.12f;
@@ -80,23 +80,20 @@ public class Main {
             System.out.println(maxLossDay);
             System.out.println(minLossDay);
 // Задание №8
-        int salaryMonthMasha = 67760;
-        int salaryMonthDenis = 83690;
-        int salaryMonthKristina = 76230;
+        int salaryMasha = 67760;
+        int salaryDenis = 83690;
+        int salaryKristina = 76230;
         byte monthYear = 12;
         double coefficient = 0.1;
 
-        int monthYearSalaryMonthMasha = monthYear * salaryMonthMasha; // Зп Маши за 12 сесяцев
-        int monthYearSalaryMonthDenis = monthYear * salaryMonthDenis; // Зп Дениса за 12 месяцев
-        int monthYearSalaryMonthKristina = monthYear * salaryMonthKristina; //За Кристины за 12 месяцев
-        double salaryMonthMashaNew = salaryMonthMasha + (salaryMonthMasha * coefficient); // Зп Маши с 10%
-        double salaryMonthDenisNew = salaryMonthDenis + (salaryMonthDenis * coefficient); // Зп Дениса с 10%
-        double salaryMonthKristinaNew = salaryMonthKristina + (salaryMonthKristina * coefficient); // Зп Кристины с 10%
-        double salaryMonthMashaNewYear = (salaryMonthMashaNew * monthYear) - (salaryMonthMasha * monthYear); //"Разница годовая Маши "
-        double salaryMonthDenisNewYear = (salaryMonthDenisNew * monthYear) - (salaryMonthDenis * monthYear); //"Разница годовая Дениса "
-        double salaryMonthKristinaNewYear = (salaryMonthKristinaNew * monthYear) - (salaryMonthKristina * monthYear); //"Разница годовая Кристины "
-            System.out.println("Маша будет получать " + salaryMonthMashaNew + " рублей. Годовая разница в ЗП составляет " + salaryMonthMashaNewYear);
-            System.out.println("Денис будет получать " + salaryMonthDenisNew + " рублей. Годовая разница в ЗП составляет " + salaryMonthDenisNewYear);
-            System.out.println("Кристина будет получать " +  salaryMonthKristinaNew + " рублей. Годовая разница в ЗП составляет " + salaryMonthKristinaNewYear);
+        double salaryMashaNew = salaryMasha + (salaryMasha * coefficient); // Зп Маши с 10%
+        double salaryDenisNew = salaryDenis + (salaryDenis * coefficient); // Зп Дениса с 10%
+        double salaryKristinaNew = salaryKristina + (salaryKristina * coefficient); // Зп Кристины с 10%
+        double salaryMashaDifferenceYear = (salaryMashaNew * monthYear) - (salaryMasha * monthYear); //"Разница годовая Маши "
+        double salaryDenisDifferenceYear = (salaryDenisNew * monthYear) - (salaryDenis * monthYear); //"Разница годовая Дениса "
+        double salaryKristinaDifferenceYear = (salaryKristinaNew * monthYear) - (salaryKristina * monthYear); //"Разница годовая Кристины "
+            System.out.println("Маша будет получать " + salaryMashaNew + " рублей. Годовая разница в ЗП составляет " + salaryMashaDifferenceYear);
+            System.out.println("Денис будет получать " + salaryDenisNew + " рублей. Годовая разница в ЗП составляет " + salaryDenisDifferenceYear);
+            System.out.println("Кристина будет получать " +  salaryKristinaNew + " рублей. Годовая разница в ЗП составляет " + salaryKristinaDifferenceYear);
     }
 }
