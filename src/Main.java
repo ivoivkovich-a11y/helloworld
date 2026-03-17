@@ -53,7 +53,19 @@ public class Main {
         short owerBrownJar = (short) (totalClass * oneClassBrownJar);
             System.out.println("В школе, где " + totalClass + " классов, нужно " + owerWhiteJar + " банок белой краски и " + owerBrownJar + " банок коричневой краски");
 // Задание №6
-        int weightGr = getWeightGr();
+        byte bananas = 5;
+        byte weightBanana = 105;
+        short milk = 200;
+        byte weightMilkInOneHundred = 105;
+        byte iceCream = 2;
+        byte weightIceCream = 100;
+        byte egg = 4;
+        byte weightEgg = 70;
+        int weightBananas = bananas * weightBanana;
+        int weightMilks = milk / 100 * weightMilkInOneHundred;
+        int weightIceCreams = iceCream * weightIceCream;
+        int weightEggs = egg * weightEgg;
+        int weightGr = weightBananas + weightMilks + weightIceCreams + weightEggs;
         double weightKg = weightGr / 1000.0;
             System.out.println(weightGr);
             System.out.println(weightKg);
@@ -83,22 +95,5 @@ public class Main {
             System.out.println("Маша будет получать " + salaryMashaNew + " рублей. Годовая разница в ЗП составляет " + salaryMashaDifferenceYear);
             System.out.println("Денис будет получать " + salaryDenisNew + " рублей. Годовая разница в ЗП составляет " + salaryDenisDifferenceYear);
             System.out.println("Кристина будет получать " +  salaryKristinaNew + " рублей. Годовая разница в ЗП составляет " + salaryKristinaDifferenceYear);
-    }
-
-    private static int getWeightGr() {
-        byte bananas = 5;
-        byte weightBanana = 105;
-        short milk = 200;
-        byte weightMilkInOneHundred = 105;
-        byte iceCream = 2;
-        byte weightIceCream = 100;
-        byte egg = 4;
-        byte weightEgg = 70;
-        int weightBananas = bananas * weightBanana;
-        int weightMilks = milk / 100 * weightMilkInOneHundred;
-        int weightIceCreams = iceCream * weightIceCream;
-        int weightEggs = egg * weightEgg;
-        int weightGr = weightBananas + weightMilks + weightIceCreams + weightEggs;
-        return weightGr;
     }
 }
